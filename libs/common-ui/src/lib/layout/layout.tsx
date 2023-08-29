@@ -12,9 +12,11 @@ export function Layout(props: LayoutProps) {
     //   <h1>Welcome to Layout!</h1>
     // </div>
     <>
-      <Header />
-      <Sidebar />
-      <Outlet />
+      <div className="skin-blue">
+        <Header />
+        <Sidebar />
+        <Outlet />
+      </div>
     </>
   );
 }

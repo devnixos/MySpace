@@ -1,3 +1,4 @@
+export * from './lib/table/table';
 export * from './lib/layout/layout';
 export * from './lib/sidebar/sidebar';
 export * from './lib/header/header';

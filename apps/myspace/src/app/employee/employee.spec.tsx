@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import AddEmployeeForm from './add-employee-form';
+import Employee from './employee';
 
 describe('AddEmployeeForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<AddEmployeeForm />);
+    const { baseElement } = render(<Employee />);
     expect(baseElement).toBeTruthy();
   });
 });

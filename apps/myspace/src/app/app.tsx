@@ -5,7 +5,7 @@ import Dashboard from './dashboard/dashboard';
 import styles from './app.module.css';
 import Register from './register/register';
 import Login from './login/login';
-import AddEmployeeForm from './add-employee-form/add-employee-form';
+import Employee from './employee/employee';
 
 export function App() {
   return (
@@ -17,7 +17,7 @@ export function App() {
         <Route path="register" element={<Register />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path='addEmployee' element={<AddEmployeeForm />} />
+          <Route path='addEmployee' element={<Employee />} />
         </Route>
       </Routes>
     </BrowserRouter>

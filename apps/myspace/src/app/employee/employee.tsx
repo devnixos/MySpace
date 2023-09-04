@@ -1,10 +1,10 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ZodType, z } from 'zod';
-import { addEmployeeData } from '../services/RestApiServices/Service';
+import { ENDPOINTS,createAPIEndpoint } from '../../services/RestApi';
 
 /* eslint-disable-next-line */
-export interface AddEmployeeFormProps { }
+export interface EmployeeProps { }
 
 interface IEmployeeFormValues {
   firstName: string;
@@ -18,7 +18,7 @@ const validationSchema: ZodType<IEmployeeFormValues> = z.object({
   lastName: z.string().min(1, { message: 'Last Name is required' }),
 });
 
-export function AddEmployeeForm(props: AddEmployeeFormProps) {
+export function Employee(props: EmployeeProps) {
   const {
     register,
     handleSubmit,
@@ -28,8 +28,8 @@ export function AddEmployeeForm(props: AddEmployeeFormProps) {
   });
 
   const onSubmit: SubmitHandler<IEmployeeFormValues> = async (data) => {
-    const result = await addEmployeeData(data).then(response => console.log("response", response))
-      .catch(error => console.log("error", error));
+    await createAPIEndpoint(ENDPOINTS.EMPLOYEE).create(data).
+    then((res)=> console.log(res)).catch((err)=> console.log(err));
   };
 
   return (
@@ -117,4 +117,4 @@ export function AddEmployeeForm(props: AddEmployeeFormProps) {
   );
 }
 
-export default AddEmployeeForm;
+export default Employee;

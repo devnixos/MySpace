@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '@mindruby/common-ui';
 import Dashboard from './dashboard/dashboard';
 import styles from './app.module.css';
+import Register from './register/register';
+import Login from './login/login';
 
 export function App() {
   return (
@@ -10,6 +12,8 @@ export function App() {
       <Routes>
         {/* <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} /> */}
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
         </Route>

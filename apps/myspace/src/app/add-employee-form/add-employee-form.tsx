@@ -103,11 +103,6 @@ export function AddEmployeeForm(props: AddEmployeeFormProps) {
                 <div className="row">
                   <div className="col-sm-3 col-xs-6">
                     <div className="description-block border-right">
-                      <span className="description-percentage text-green">
-                        <i className="fa fa-caret-up"></i> 17%
-                      </span>
-                      <h5 className="description-header">$35,210.43</h5>
-                      <span className="description-text">TOTAL REVENUE</span>
                     </div>
                   </div>
                 </div>
